@@ -92,7 +92,7 @@ func sendHttpError(w http.ResponseWriter, err string) {
 	log.Println(err)
 }
 
-func quotationHandler(w http.ResponseWriter, r *http.Request) {
+func quotationHandler(w http.ResponseWriter, _ *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	ctx, cancel := context.WithTimeout(context.Background(), 200*time.Millisecond)
 	defer cancel()
